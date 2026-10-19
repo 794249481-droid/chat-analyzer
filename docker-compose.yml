@@ -1,0 +1,20 @@
+Warning: fs was declared with const; use let for reassignable variables.
+version: "3"
+
+services:
+  chat-analyzer:
+    build: .
+    container_name: chat-analyzer
+    restart: unless-stopped
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./output:/app/output
+      - ./uploads:/app/uploads
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

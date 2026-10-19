@@ -1,0 +1,11 @@
+Warning: fs was declared with const; use let for reassignable variables.
+__pycache__/
+*.py[cod]
+.venv/
+uploads/
+output/
+*.log
+*.pid
+.public_url
+.env
+.DS_Store

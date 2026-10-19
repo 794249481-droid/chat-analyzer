@@ -1,0 +1,14 @@
+Warning: fs was declared with const; use let for reassignable variables.
+output/
+uploads/
+__pycache__/
+*.pyc
+.DS_Store
+ngrok.log
+server.log
+launchd.log
+.public_url
+.server.pid
+.ngrok.pid
+*.zip
+*.dmg
