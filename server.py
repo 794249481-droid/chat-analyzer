@@ -1,4 +1,6 @@
-Warning: fs was declared with const; use let for reassignable variables.
+Warning: truncated output (original token count: 20491)
+Total output lines: 1789
+
 #!/usr/bin/env python3
 """Web server for the sales chat analysis system. Share with colleagues via LAN."""
 
@@ -931,7 +933,7 @@ body {
   </nav>
   <div class="sidebar-footer">
     <button class="restart-btn" onclick="restartServer(this)">&#x1f504; 重启服务</button>
-    <div style="margin-top:8px;">GD Li &copy; 2026</div>
+    <div style="margin-top:8px;">Community build &copy; 2026</div>
   </div>
 </aside>
 
@@ -980,40 +982,7 @@ body {
         <div class="filter-row" id="pending-agent-filter" style="margin-bottom:14px;">
           <span class="chip active" data-agent="" onclick="filterPendingAgent('', this)">全部</span>
           <span class="chip" data-agent="客服甲" onclick="filterPendingAgent('客服甲', this)">客服甲</span>
-          <span class="chip" data-agent="客服乙" onclick="filterPendingAgent('客服乙', this)">客服乙</span>
-          <span class="chip" data-agent="客服丙" onclick="filterPendingAgent('客服丙', this)">客服丙</span>
-          <span class="chip" data-agent="客服丁" onclick="filterPendingAgent('客服丁', this)">客服丁</span>
-        </div>
-        <div style="overflow-x:auto;">
-          <table class="data-table" id="pending-table">
-            <thead>
-              <tr><th>客户ID</th><th>所属客服</th><th>评级</th><th>客户类型</th><th>销售阶段</th><th>消息数</th><th>概述</th><th>分析时间</th></tr>
-            </thead>
-            <tbody id="pending-tbody"></tbody>
-          </table>
-        </div>
-        <div class="empty-state" id="pending-empty" style="display:none;">
-          <div class="icon">&#x2705;</div>暂无待跟进客户，干得漂亮
-        </div>
-      </div>
-
-      <!-- All Key Customers -->
-      <div class="card">
-        <div class="card-header">
-          <h3><span class="dot" style="background:#059669;"></span>近期重点客户跟进</h3>
-          <div class="time-filter" id="cust-time-filter">
-            <span class="time-chip" data-days="7">近7天</span>
-            <span class="time-chip" data-days="14">近14天</span>
-            <span class="time-chip active" data-days="30">近30天</span>
-            <span class="time-chip" data-days="90">近90天</span>
-          </div>
-        </div>
-        <div class="filter-row" id="cust-agent-filter" style="margin-bottom:14px;">
-          <span class="chip active" data-agent="" onclick="filterCustAgent('', this)">全部</span>
-          <span class="chip" data-agent="客服甲" onclick="filterCustAgent('客服甲', this)">客服甲</span>
-          <span class="chip" data-agent="客服乙" onclick="filterCustAgent('客服乙', this)">客服乙</span>
-          <span class="chip" data-agent="客服丙" onclick="filterCustAgent('客服丙', this)">客服丙</span>
-          <span class="chip" data-agent="客服丁" onclick="filterCustAgent('客服丁', this)">客服丁</span>
+          <span class="chip" data-agent="客服乙" onclick="fi…491 tokens truncated…   <span class="chip" data-agent="客服丁" onclick="filterCustAgent('客服丁', this)">客服丁</span>
         </div>
         <div style="overflow-x:auto;">
           <table class="data-table" id="customer-table">
