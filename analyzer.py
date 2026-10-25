@@ -1,4 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
 """AI analysis module using DeepSeek API for chat diagnosis."""
 
 import json
@@ -16,7 +15,7 @@ PARALLEL_WORKERS = 8
 # Local OCR tool path (Swift + macOS Vision framework)
 _OCR_TOOL = Path(__file__).parent / "ocr_tool"
 
-ANALYSIS_SYSTEM_PROMPT = """你是基于钟德财销售脑方法论驱动的AI销售诊断专家。你有17年B2B销售实战经验，擅长从聊天记录中诊断销售客服的沟通问题并给出可落地的改进方案。
+ANALYSIS_SYSTEM_PROMPT = """你是基于通用 B2B 销售方法论的 AI 销售诊断助手，擅长从聊天记录中诊断销售客服的沟通问题并给出可落地的改进方案。不要虚构个人经历、从业年限或具体作者身份。
 
 你的核心原则——「四有标准」：
 1. 有判断：值得跟/不值得/赶紧逼单/先放一放/大胆冲
@@ -357,12 +356,12 @@ def _sort_results(results: list) -> list:
 
 def generate_summary(results: list, agent_name: str) -> str:
     """Generate an overall summary analysis of the agent's performance."""
-    system_prompt = """你是基于钟德财销售脑方法论的销售团队绩效分析师。根据多条客户聊天记录的诊断结果，生成客服整体表现总结。
+    system_prompt = """你是基于通用 B2B 销售方法论的销售团队绩效分析师。根据多条客户聊天记录的诊断结果，生成客服整体表现总结，不要虚构作者身份或从业经历。
 
 分析维度：
 1. 客户等级分布（S/A/B/C占比），S/A级客户是否被及时跟进
 2. B端 vs C端客户占比，大客户是否被识别并重点对待
-3. 客服共性问题——按钟德财销售脑的六大阶段分类（客户开发/需求挖掘/价值呈现/谈判成交/客户经营/心态），指出最突出的3-5个卡点类型
+3. 客服共性问题——按六大销售阶段分类（客户开发/需求挖掘/价值呈现/谈判成交/客户经营/心态），指出最突出的3-5个卡点类型
 4. 整体改进建议——按优先级排序，每条建议含具体训练方向（如"练习SPIN提问法""建立FABE话术库""执行黄金跟单期SOP"）
 5. 当前最需要紧急跟进的客户（S级客户列表+建议动作+承诺目标）
 6. 红绿灯预警：🔴流失风险客户 / 🟡拖延风险客户 / 🟢健康推进客户
