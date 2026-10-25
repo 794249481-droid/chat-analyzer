@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "date_range": "2026-01-01/2026-01-01",
+    "source": "sanitized-demo",
+    "agent": {"name": "sales-demo"}
+  },
+  "messages": [
+    {
+      "customer": "customer-demo",
+      "content": "customer-demo2026-01-01 09:15:00需要酒店项目用的餐椅，数量大约20套，想了解交期和包装。",
+      "msg_id": "demo-001",
+      "timestamp": "2026-01-01 09:15:00"
+    },
+    {
+      "customer": "customer-demo",
+      "content": "2026-01-01 09:17:00chinagrd:sales-demo您好，我先确认项目城市、预计下单时间和需要的尺寸。",
+      "msg_id": "demo-002",
+      "timestamp": "2026-01-01 09:17:00"
+    }
+  ]
+}
