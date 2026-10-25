@@ -31,6 +31,18 @@ python3 main.py path/to/chat-export.json --limit 5
 
 建议先用脱敏的测试 JSON 验证流程，再接入截图 OCR 或第三方模型。命令行会输出分析结果，网页模式会生成可下载的 HTML、CSV 和 JSON 报告。
 
+## 与 1688 插件配合使用
+
+如果你使用 [1688-chat-downloader](https://github.com/794249481-droid/1688-chat-downloader) 或 [lai-assistant](https://github.com/794249481-droid/lai-assistant)，可以把前一天导出的询盘记录作为本项目的输入。建议每天按以下顺序复盘：
+
+`导出前一天记录 → 删除客户身份信息 → 导入 JSON 或截图 → 检查客户分级和需求摘要 → 人工确认 → 输出跟进清单`
+
+通过多日结果的汇总，可以进一步观察客户反复关注的产品功能、规格、包装、交期和价格，帮助销售团队发现产品改进机会和市场需求动向。分析器只提供辅助判断，不会替代人工确认，也不会自动证明某个市场趋势。
+
+## Daily sales review workflow
+
+Use an export from the 1688 extensions as a sanitized input. The analyzer can organize conversations into lead priority, customer needs, objections, product questions, follow-up suggestions, and machine-readable reports. Review the result manually before using it for customer communication, sales coaching, or product decisions.
+
 截图 OCR 功能依赖项目外部的 OCR 工具；JSON 分析和报告生成可以先独立验证。图片分析还需要配置 DeepSeek API：
 
 ```sh
