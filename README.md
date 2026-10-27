@@ -31,6 +31,15 @@ python3 main.py path/to/chat-export.json --limit 5
 
 建议先用脱敏的测试 JSON 验证流程，再接入截图 OCR 或第三方模型。命令行会输出分析结果，网页模式会生成可下载的 HTML、CSV 和 JSON 报告。
 
+先制作脱敏副本，再交给分析器：
+
+```sh
+python3 tools/sanitize_export.py raw-export.json work/sanitized-export.json
+python3 main.py work/sanitized-export.json --mode json --output-dir reports
+```
+
+脚本会处理常见手机号、邮箱、微信号、订单号以及客户/客服字段，但不能保证识别所有个人信息。分享或上传前仍需人工检查。
+
 ## 与 1688 插件配合使用
 
 如果你使用 [1688-chat-downloader](https://github.com/794249481-droid/1688-chat-downloader) 或 [lai-assistant](https://github.com/794249481-droid/lai-assistant)，可以把前一天导出的询盘记录作为本项目的输入。建议每天按以下顺序复盘：
